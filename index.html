@@ -151,7 +151,9 @@
         <h3 style="margin-top:22px">Schnellkontakt</h3>
         <p>Schreib uns kurz dein Anliegen – wir melden uns asap.</p>
         <!-- Dummy-Form (ohne Backend) -->
-        <form onsubmit="alert('Danke! Diese Demo sendet keine Daten.'); return false;">
+       <form action="https://formsubmit.co/garage.oroshi@bluewin.ch" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_subject" value="Neue Anfrage über die Garage Oroshi Website">
           <div style="display:grid; gap:8px">
             <input aria-label="Name" required placeholder="Dein Name" style="padding:10px;border-radius:10px;border:1px solid #e5e7eb">
             <input aria-label="E-Mail" type="email" required placeholder="E‑Mail" style="padding:10px;border-radius:10px;border:1px solid #e5e7eb">
