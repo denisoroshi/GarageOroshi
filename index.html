@@ -15,10 +15,10 @@
       color:var(--ink); background:var(--bg); line-height:1.55;
     }
     /* Header / Hero */
- .hero{
+.hero{
   position:relative;
-  height:22vh;
-  min-height:140px;
+  height:18vh;         /* kleiner */
+  min-height:120px;    /* Mindesthöhe */
   color:#fff;
   display:grid;
   place-items:center;
@@ -26,6 +26,7 @@
   overflow:hidden;
   background:#0b63ce;
 }
+``
     .hero::before{
       content:""; position:absolute; inset:0;
       background: url("images/garage-hero.jpg") center/cover no-repeat;
