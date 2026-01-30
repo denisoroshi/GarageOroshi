@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Garage Oroshi – Ettiswil</title>
+  <style>
+    :root{
+      --bg:#f6f7f9; --card:#ffffff; --ink:#1a1f36; --muted:#64748b;
+      --brand:#0b63ce; --accent:#0ea5e9; --radius:14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+      color:var(--ink); background:var(--bg); line-height:1.55;
+    }
+    /* Header / Hero */
+    .hero{
+      position:relative; height:42vh; min-height:320px; color:#fff;
+      display:grid; place-items:center; text-align:center; overflow:hidden;
+      background:#0b63ce;
+    }
+    .hero::before{
+      content:""; position:absolute; inset:0;
+      background: url("images/garage-hero.jpg") center/cover no-repeat;
+      filter:brightness(.65);
+    }
+    .hero .inner{ position:relative; padding:24px }
+    .brand{
+      display:inline-flex; align-items:center; gap:12px;
+      backdrop-filter: blur(6px);
+      background: rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.25);
+      border-radius:999px; padding:8px 16px; margin-bottom:12px;
+      font-weight:600; letter-spacing:.2px;
+    }
+    .brand img{ width:28px; height:28px; border-radius:50%; object-fit:cover }
+    h1{ margin:10px 0 6px; font-size:clamp(26px,4.5vw,42px) }
+    .tagline{ margin:0; color:#e6f0ff; font-size:clamp(14px,2vw,18px) }
+
+    /* Wrapper */
+    .wrap{ max-width:1100px; margin:-64px auto 48px; padding:0 20px }
+    .card{
+      background:var(--card); border-radius:var(--radius);
+      box-shadow: 0 20px 40px rgba(2,6,23,.08);
+      padding:24px;
+    }
+
+    /* Grid */
+    .grid{ display:grid; gap:22px }
+    @media (min-width:880px){ .grid.cols-2{ grid-template-columns: 1.2fr .8fr } }
+
+    /* Textblocks */
+    .lead{ font-size:18px; color:var(--muted) }
+    .kpi{ display:flex; flex-wrap:wrap; gap:10px 16px; margin:14px 0 }
+    .kpi span{
+      background:#eef2ff; color:#334155; border-radius:999px; padding:6px 12px; font-size:14px
+    }
+
+    /* Gallery */
+    .gallery{
+      display:grid; gap:12px; grid-template-columns: repeat(2,1fr);
+    }
+    @media (min-width:700px){ .gallery{ grid-template-columns: repeat(3,1fr) } }
+    .gallery img{
+      width:100%; aspect-ratio:4/3; object-fit:cover;
+      border-radius:12px; box-shadow:0 8px 18px rgba(2,6,23,.06);
+      transition: transform .2s ease;
+    }
+    .gallery img:hover{ transform: translateY(-2px) }
+
+    /* Contact Card */
+    .contact{
+      display:grid; gap:10px; font-size:16px
+    }
+    .contact a{ color:var(--brand); text-decoration:none }
+    .contact a:hover{ text-decoration:underline }
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:10px;
+      background:linear-gradient(135deg,var(--brand),var(--accent));
+      color:#fff; text-decoration:none; font-weight:600;
+      box-shadow:0 10px 20px rgba(14,165,233,.25);
+    }
+
+    /* Footer */
+    footer{ text-align:center; color:var(--muted); font-size:14px; padding:28px 12px 40px }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="inner">
+      <span class="brand">
+        <!-- Optional: Logo -->
+        <img src="images/logo.jpg" alt="Garage Oroshi Logo" onerror="this.style.display='none'">
+        Garage Oroshi • Ettiswil
+      </span>
+      <h1>Zuverlässiger Service für Auto & Motorrad</h1>
+      <p class="tagline">Reparaturen, Service, Occasionen, Ersatzteile & Vermietung – fair, freundlich, schnell.</p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="wrap">
+    <section class="card grid cols-2" aria-labelledby="about">
+      <div>
+        <h2 id="about">Willkommen</h2>
+        <p class="lead">
+          Garage Oroshi in Ettiswil bietet fachkundige Wartung und Reparaturen für alle Marken,
+          geprüfte Occasionen, Teile & Zubehör sowie Vermietung – persönlich und unkompliziert.
+        </p>
+
+        <div class="kpi">
+          <span>Service & Reparaturen</span>
+          <span>Occasionfahrzeuge</span>
+          <span>Ersatzteile & Zubehör</span>
+          <span>Fahrzeug‑Vermietung</span>
+        </div>
+
+        <h3>Unsere Arbeiten</h3>
+        <div class="gallery">
+          <img src="images/work-1.jpg" alt="Bremsenservice an PKW">
+          <img src="images/work-2.jpg" alt="Diagnose in der Werkstatt">
+          <img src="images/work-3.jpg" alt="Aufbereitung Occasionfahrzeug">
+          <img src="images/work-4.jpg" alt="Reifen- und Radservice">
+          <img src="images/work-5.jpg" alt="Motorradservice">
+          <img src="images/work-6.jpg" alt="Abgabe fertiges Fahrzeug">
+        </div>
+      </div>
+
+      <aside>
+        <h2>Kontakt</h2>
+        <div class="contact">
+          <div><strong>Adresse:</strong><br>Riedbrugg 6, 6218 Ettiswil</div>
+          <div><strong>Telefon:</strong> <a href="tel:+41796292801">079 629 28 01</a></div>
+          <div><strong>E‑Mail:</strong> <a href="mailto:garage.oroshi@bluewin.ch">garage.oroshi@bluewin.ch</a></div>
+          <div><strong>Öffnungszeiten (Beispiel):</strong><br>
+            Mo–Fr 08:00–12:00 / 13:00–18:00<br>Sa 09:00–13:00
+          </div>
+          <div>
+            <a class="btn" href="https://maps.google.com/?q=Riedbrugg%206,%206218%20Ettiswil" target="_blank" rel="noopener">Route planen</a>
+          </div>
+        </div>
+
+        <h3 style="margin-top:22px">Schnellkontakt</h3>
+        <p>Schreib uns kurz dein Anliegen – wir melden uns asap.</p>
+        <!-- Dummy-Form (ohne Backend) -->
+        <form onsubmit="alert('Danke! Diese Demo sendet keine Daten.'); return false;">
+          <div style="display:grid; gap:8px">
+            <input aria-label="Name" required placeholder="Dein Name" style="padding:10px;border-radius:10px;border:1px solid #e5e7eb">
+            <input aria-label="E-Mail" type="email" required placeholder="E‑Mail" style="padding:10px;border-radius:10px;border:1px solid #e5e7eb">
+            <textarea aria-label="Nachricht" required placeholder="Nachricht" rows="3" style="padding:10px;border-radius:10px;border:1px solid #e5e7eb;resize:vertical"></textarea>
+            <button class="btn" type="submit">Absenden</button>
+          </div>
+        </form>
+      </aside>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="y"></span> Garage Oroshi • Ettiswil — Alle Rechte vorbehalten
+  </footer>
+
+  <script>
+    // Jahr automatisch setzen
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
